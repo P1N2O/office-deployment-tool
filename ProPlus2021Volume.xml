@@ -1,13 +1,30 @@
-<Configuration ID="bbe0a4bc-f07c-4fc0-b551-65e02fd5dcaf">
-  <Add OfficeClientEdition="64" Channel="PerpetualVL2019">
-    <Product ID="ProPlus2019Volume" PIDKEY="NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP">
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+    <Product ID="ProPlus2021Volume" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">
       <Language ID="en-us" />
+      <Product ID="ProofingTools">
+        <Language ID="en-us" />
+      </Product>
+      <!-- Access -->
       <ExcludeApp ID="Access" />
+      <!-- Excel -->
+      <!-- <ExcludeApp ID="Excel" /> -->
+      <!-- OneDrive for Business (SharePoint) -->
       <ExcludeApp ID="Groove" />
+      <!-- Skype for Business -->
       <ExcludeApp ID="Lync" />
+      <!-- OneDrive -->
       <ExcludeApp ID="OneDrive" />
+      <!-- OneNote -->
       <ExcludeApp ID="OneNote" />
+      <!-- Outlook -->
+      <!-- <ExcludeApp ID="Outlook" /> -->
+      <!-- PowerPoint -->
+      <!-- <ExcludeApp ID="PowerPoint" /> -->
+      <!-- Publisher -->
       <ExcludeApp ID="Publisher" />
+      <!-- Word -->
+      <!-- <ExcludeApp ID="Word" /> -->
     </Product>
   </Add>
   <Property Name="SharedComputerLicensing" Value="0" />
@@ -18,6 +35,7 @@
   <Updates Enabled="TRUE" />
   <RemoveMSI />
   <AppSettings>
+    <!-- <Setup Name="Company" Value="Your Company Name" /> -->
     <User Key="software\microsoft\office\16.0\excel\options" Name="defaultformat" Value="51" Type="REG_DWORD" App="excel16" Id="L_SaveExcelfilesas" />
     <User Key="software\microsoft\office\16.0\powerpoint\options" Name="defaultformat" Value="27" Type="REG_DWORD" App="ppt16" Id="L_SavePowerPointfilesas" />
     <User Key="software\microsoft\office\16.0\word\options" Name="defaultformat" Value="" Type="REG_SZ" App="word16" Id="L_SaveWordfilesas" />
