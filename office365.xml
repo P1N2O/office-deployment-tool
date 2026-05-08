@@ -2,14 +2,31 @@
   <Add OfficeClientEdition="64" Channel="Current" MigrateArch="TRUE">
     <Product ID="O365ProPlusEEANoTeamsRetail">
       <Language ID="MatchOS" />
-      <ExcludeApp ID="Access" />
-      <ExcludeApp ID="Groove" />
-      <ExcludeApp ID="Lync" />
-      <ExcludeApp ID="OneDrive" />
-      <ExcludeApp ID="OneNote" />
+      <!-- Word -->
+      <!-- <ExcludeApp ID="Word" /> -->
+      <!-- Excel -->
+      <!-- <ExcludeApp ID="Excel" /> -->
+      <!-- PowerPoint -->
+      <!-- <ExcludeApp ID="PowerPoint" /> -->
+      <!-- Outlook -->
       <ExcludeApp ID="Outlook" />
+      <!-- OneNote -->
+      <ExcludeApp ID="OneNote" />
+      <!-- Publisher -->
       <ExcludeApp ID="Publisher" />
+      <!-- Access -->
+      <ExcludeApp ID="Access" />
+
+      <!-- OneDrive -->
+      <ExcludeApp ID="OneDrive" />
+      <!-- Teams -->
+      <ExcludeApp ID="Teams" />
+      <!-- Bing -->
       <ExcludeApp ID="Bing" />
+      <!-- Groove - Old sync client for on-Premises SharePoint -->
+      <ExcludeApp ID="Groove" />
+      <!-- Skype for Business -->
+      <ExcludeApp ID="Lync" />
     </Product>
   </Add>
   <RemoveMSI />

@@ -2,27 +2,33 @@
 
 The Office Deployment Tool (ODT) is a command-line tool that you can use to download and deploy Click-to-Run versions of Office, such as Microsoft 365 Apps for enterprise, to your client computers.
 
-##### Execute the below commands in an elevated Command Prompt/PowerShell (Run as administrator)
+## Installation (Automated)
 
-## Installation
+```powershell
+powershell -c "irm https://raw.githubusercontent.com/P1N2O/office-deployment-tool/main/install.ps1 | iex"
+```
+
+## ODT Commands
+
+### Installation
 
 ```cmd
 setup.exe /configure office365.xml
 ```
 
-## Customize
+### Customize
 
 ```cmd
 setup.exe /customize office365.xml
 ```
 
-## Download
+### Download
 
 ```cmd
 setup.exe /download office365.xml
 ```
 
-## Pack (App-V Package)
+### Pack (App-V Package)
 
 ```cmd
 setup.exe /packager office365.xml
