@@ -1,53 +1,31 @@
-# Office Deployment Tool v16.0.17531.20046
+# Office Deployment Tool
 
 The Office Deployment Tool (ODT) is a command-line tool that you can use to download and deploy Click-to-Run versions of Office, such as Microsoft 365 Apps for enterprise, to your client computers.
 
-## Download
-
-```cmd
-setup.exe /download ProPlus2021Volume.xml
-```
+##### Execute the below commands in an elevated Command Prompt/PowerShell (Run as administrator)
 
 ## Installation
 
 ```cmd
-setup.exe /configure ProPlus2021Volume.xml
-```
-
-## Pack (App-V Package)
-
-```cmd
-setup.exe /packager ProPlus2021Volume.xml
+setup.exe /configure office365.xml
 ```
 
 ## Customize
 
 ```cmd
-setup.exe /customize ProPlus2021Volume.xml
+setup.exe /customize office365.xml
 ```
 
-## Convert (Retail to Volume)
+## Download
 
 ```cmd
-cd /d %ProgramFiles%\Microsoft Office\Office16
+setup.exe /download office365.xml
 ```
+
+## Pack (App-V Package)
 
 ```cmd
-for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+setup.exe /packager office365.xml
 ```
 
-## Activate
-
-```cmd
-cd /d %ProgramFiles%\Microsoft Office\Office16
-```
-
-```cmd
-cscript ospp.vbs /sethst:<KMS_HOST_ADDRESS>
-```
-
-```cmd
-cscript ospp.vbs /act
-```
-
-Official Links: [Microsoft Download Center - ODT](https://www.microsoft.com/en-us/download/details.aspx?id=49117) | [Microsoft Docs - ODT Overview](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool)
+Official Links: [Microsoft Download Center - ODT](https://www.microsoft.com/en-us/download/details.aspx?id=49117) | [Microsoft Docs - ODT Overview](https://learn.microsoft.com/en-us/microsoft-365-apps/deploy/overview-office-deployment-tool)
